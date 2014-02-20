@@ -34,7 +34,7 @@ public class CalculatorTest {
     }
     @Test 
     public void subtract() {
-        Assert.assertEquals(service.subtract(5,2),6);
+        Assert.assertEquals(service.subtract(5,2),3);
         
     }
     

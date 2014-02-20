@@ -12,19 +12,16 @@ import michaelfouche.tp2.service.CalculatorService;
  *
  * @author student
  */
-public class CalculatorServiceImpl implements CalculatorService{
+public class superCalc implements CalculatorService{
     
     public int add(int a, int b)
     {
+        System.out.println("Super Calc");
         return a+b;
-    
     }
     
     public int subtract(int a, int b){
+        System.out.println("Super Calc");
         return a-b;
     }
-    
-    
-    
-            
 }
