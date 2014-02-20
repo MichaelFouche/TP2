@@ -9,6 +9,8 @@ package michaelfouche.tp2.config;
 import michaelfouche.tp2.service.CalculatorService;
 import michaelfouche.tp2.service.Impl.CalculatorServiceImpl;
 import michaelfouche.tp2.service.Impl.superCalc;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 
 /**
  *

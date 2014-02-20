@@ -16,12 +16,12 @@ public class superCalc implements CalculatorService{
     
     public int add(int a, int b)
     {
-        System.out.println("Super Calc");
+        System.out.println("Super Calc Add");
         return a+b;
     }
     
     public int subtract(int a, int b){
-        System.out.println("Super Calc");
+        System.out.println("Super Calc Subtract");
         return a-b;
     }
 }

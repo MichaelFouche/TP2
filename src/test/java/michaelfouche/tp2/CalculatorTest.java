@@ -6,8 +6,11 @@
 
 package michaelfouche.tp2;
 
+import michaelfouche.tp2.config.appConfig;
 import michaelfouche.tp2.service.CalculatorService;
 import michaelfouche.tp2.service.Impl.CalculatorServiceImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
@@ -39,7 +42,9 @@ public class CalculatorTest {
     
     @org.testng.annotations.BeforeClass
     public static void setUpClass() throws Exception {
-        service = new CalculatorServiceImpl();
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(appConfig.class);
+        service = (CalculatorService)ctx.getBean("calc");
+       // service = new CalculatorServiceImpl();        
     }
 
     @org.testng.annotations.AfterClass
@@ -48,6 +53,7 @@ public class CalculatorTest {
 
     @org.testng.annotations.BeforeMethod
     public void setUpMethod() throws Exception {
+        
     }
 
     @org.testng.annotations.AfterMethod
