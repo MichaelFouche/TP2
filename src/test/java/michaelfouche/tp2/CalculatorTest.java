@@ -34,13 +34,25 @@ public class CalculatorTest {
     public void add() {
         Assert.assertEquals(service.add(5,2),7);        
     }
-    
+    @Test 
     public void subtract() {
         Assert.assertEquals(service.subtract(5,2),3);        
     }
+    @Test 
     public void sameValue(){
         Assert.assertSame(true, service.sameValue(12,12));
     }
+    @Test 
+    public void valTrue(){
+        Assert.assertTrue(service.valTrue(true),"true");    
+        Assert.assertTrue(true); 
+    }
+    @Test 
+    public void valNull(){
+        Integer obj = 10;
+        Assert.assertNotNull(service.valNotNull(obj));
+    }
+    
     
     @org.testng.annotations.BeforeClass
     public static void setUpClass() throws Exception {
