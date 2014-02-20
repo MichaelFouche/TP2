@@ -34,10 +34,12 @@ public class CalculatorTest {
     public void add() {
         Assert.assertEquals(service.add(5,2),7);        
     }
-    @Test 
+    
     public void subtract() {
-        Assert.assertEquals(service.subtract(5,2),3);
-        
+        Assert.assertEquals(service.subtract(5,2),3);        
+    }
+    public void sameValue(){
+        Assert.assertSame(true, service.sameValue(12,12));
     }
     
     @org.testng.annotations.BeforeClass

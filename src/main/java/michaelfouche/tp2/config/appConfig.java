@@ -18,14 +18,15 @@ import org.springframework.context.annotation.Configuration;
  */
 @Configuration
 public class appConfig {
-    @Bean(name = "cretired")
+    @Bean(name = "calc")
             public CalculatorService GetService()
             {
                 return new CalculatorServiceImpl();
             }
-    @Bean(name = "calc")
+  /*  @Bean(name = "calc")
             public CalculatorService GetServiceNew()
             {
                 return new superCalc();
-            }
+            }*/
+    
 }

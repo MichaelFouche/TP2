@@ -18,10 +18,12 @@ public class CalculatorServiceImpl implements CalculatorService{
     {
         return a+b;
     
-    }
-    
+    }    
     public int subtract(int a, int b){
         return a-b;
+    }
+    public boolean sameValue(int a, int b){
+        return a==b;
     }
     
     

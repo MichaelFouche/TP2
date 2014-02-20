@@ -24,4 +24,8 @@ public class superCalc implements CalculatorService{
         System.out.println("Super Calc Subtract");
         return a-b;
     }
+   /* public boolean sameValue(int a, int b){
+        System.out.println("Same Value");
+        return a==b;
+    }/*
 }
