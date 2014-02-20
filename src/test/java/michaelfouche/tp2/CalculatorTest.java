@@ -9,6 +9,7 @@ package michaelfouche.tp2;
 import michaelfouche.tp2.config.appConfig;
 import michaelfouche.tp2.service.CalculatorService;
 import michaelfouche.tp2.service.Impl.CalculatorServiceImpl;
+import org.junit.Ignore;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.testng.Assert;
@@ -47,10 +48,16 @@ public class CalculatorTest {
         Assert.assertTrue(service.valTrue(true),"true");    
         Assert.assertTrue(true); 
     }
+    
     @Test 
     public void valNull(){
         Integer obj = 10;
         Assert.assertNotNull(service.valNotNull(obj));
+    }
+    @Ignore("Ignore deliberate fail test")
+    @Test        
+    public void failedTest(){
+        Assert.fail();
     }
     
     
