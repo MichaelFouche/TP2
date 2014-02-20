@@ -29,8 +29,7 @@ public class CalculatorTest {
     // public void hello() {}
     @Test 
     public void add() {
-        Assert.assertEquals(service.add(5,2),7);
-        
+        Assert.assertEquals(service.add(5,2),7);        
     }
     @Test 
     public void subtract() {
