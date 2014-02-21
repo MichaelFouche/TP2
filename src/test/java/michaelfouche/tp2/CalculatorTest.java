@@ -6,6 +6,7 @@
 
 package michaelfouche.tp2;
 
+import java.util.regex.Matcher;
 import michaelfouche.tp2.config.appConfig;
 import michaelfouche.tp2.service.CalculatorService;
 import michaelfouche.tp2.service.Impl.CalculatorServiceImpl;
@@ -78,10 +79,15 @@ public class CalculatorTest   {
     public void verifyArrayContents()throws Exception{
         String[] arrayCars ={"Toyota","Subaru"};
         String[] arrayContent ={"Toyota","Subaru"};
-        Assert.assertTrue(service.arrayEqualTest(arrayCars, arrayContent));
+        Assert.assertTrue(service.arrayEqualTest(arrayCars,arrayContent));        
         //Assert.assertArrayEquals(arrayCars,arrayContent, "");        
     }
-    
+     @Test(expectedExceptions = IndexOutOfBoundsException.class) //10
+    public void verifyArrayAtPosition() throws Exception{
+        String[] arrayCars ={"Toyota","Subaru"};
+        Assert.assertEquals(service.getValueInArray(arrayCars),"Toyota");
+   }
+            
     
     
     @org.testng.annotations.BeforeClass

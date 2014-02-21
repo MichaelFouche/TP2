@@ -43,4 +43,8 @@ public class superCalc implements CalculatorService{
     {        
         return Arrays.equals(a,b);
     }
+    public String getValueInArray(String[] a)
+    {
+        return a[5];
+    }
 }

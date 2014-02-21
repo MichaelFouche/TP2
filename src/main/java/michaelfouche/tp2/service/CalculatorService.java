@@ -19,5 +19,6 @@ public interface CalculatorService {
     boolean valFalse(boolean a);
     Integer valNull(Integer a);
     boolean valNotNull(Integer a);
-    boolean arrayEqualTest(String[] a, String[] b);
+    public boolean arrayEqualTest(String[] a, String[] b);
+    public String getValueInArray(String[] a);
 }
