@@ -15,12 +15,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.testng.Assert;
 import static org.testng.Assert.*;
 import org.testng.annotations.Test;
-
 /**
  *
  * @author student
  */
-public class CalculatorTest {
+public class CalculatorTest   {
     
     public static CalculatorService service;
     public CalculatorTest() {
@@ -72,6 +71,17 @@ public class CalculatorTest {
     public void failedTest(){
         Assert.fail();
     }
+    //exception
+    
+    //verify arrays
+    @Test //9
+    public void verifyArrayContents()throws Exception{
+        String[] arrayCars ={"Toyota","Subaru"};
+        String[] arrayContent ={"Toyota","Subaru"};
+        Assert.assertTrue(service.arrayEqualTest(arrayCars, arrayContent));
+        //Assert.assertArrayEquals(arrayCars,arrayContent, "");        
+    }
+    
     
     
     @org.testng.annotations.BeforeClass

@@ -6,6 +6,7 @@
 
 package michaelfouche.tp2.service.Impl;
 
+import java.util.Arrays;
 import michaelfouche.tp2.service.CalculatorService;
 
 /**
@@ -37,5 +38,9 @@ public class superCalc implements CalculatorService{
     }
     public boolean valNotNull(Integer a){
         return a!=null;
+    }
+    public boolean arrayEqualTest(String[] a, String[] b)
+    {        
+        return Arrays.equals(a,b);
     }
 }
