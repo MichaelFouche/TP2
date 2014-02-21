@@ -67,22 +67,23 @@ public class CalculatorTest   {
         Assert.assertNotNull(service.valNotNull(obj));
     }
     
-    @Ignore("Ignore deliberate fail test")
-    @Test //8       
+    @Ignore("Ignore deliberate fail test")     //According to a website i read, ignore works with JUnit test, and then'enabled = false' in TestNG
+    @Test (enabled = false) //8       
     public void failedTest(){
         Assert.fail();
     }
     //exception
     
     //verify arrays
-    @Test //9
+    @Test (timeOut = 10)//9 &10
     public void verifyArrayContents()throws Exception{
         String[] arrayCars ={"Toyota","Subaru"};
         String[] arrayContent ={"Toyota","Subaru"};
         Assert.assertTrue(service.arrayEqualTest(arrayCars,arrayContent));        
-        //Assert.assertArrayEquals(arrayCars,arrayContent, "");        
+        //Assert.assertArrayEquals(arrayCars,arrayContent, ""); 
+        Thread.sleep(0);
     }
-     @Test(expectedExceptions = IndexOutOfBoundsException.class) //10
+     @Test(expectedExceptions = IndexOutOfBoundsException.class) //11
     public void verifyArrayAtPosition() throws Exception{
         String[] arrayCars ={"Toyota","Subaru"};
         Assert.assertEquals(service.getValueInArray(arrayCars),"Toyota");
