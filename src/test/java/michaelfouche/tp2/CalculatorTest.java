@@ -31,7 +31,8 @@ public class CalculatorTest {
     //
     // @Test
     // public void hello() {}
-    @Test 
+    
+    @Test //1
     public void add() {
         Assert.assertEquals(service.add(5,2),7);        
     }
@@ -39,23 +40,35 @@ public class CalculatorTest {
     public void subtract() {
         Assert.assertEquals(service.subtract(5,2),3);        
     }
-    @Test 
+    @Test //2
     public void sameValue(){
         Assert.assertSame(true, service.sameValue(12,12));
     }
-    @Test 
-    public void valTrue(){
-        Assert.assertTrue(service.valTrue(true),"true");    
-        Assert.assertTrue(true); 
+    @Test //3
+    public void notSameValue(){
+        Assert.assertNotSame(true, service.notSameValue(12,12));
     }
-    
-    @Test 
+    @Test //4
+    public void valTrue(){
+        Assert.assertTrue(service.valTrue(true),"true");  
+    } 
+    @Test //5
+    public void valFalse(){
+        Assert.assertFalse(service.valFalse(false),"false");  
+    } 
+    @Test //6
     public void valNull(){
+        Integer obj = null;
+        Assert.assertNull(service.valNull(obj));        
+    }
+    @Test //7
+    public void valNotNull(){
         Integer obj = 10;
         Assert.assertNotNull(service.valNotNull(obj));
     }
+    
     @Ignore("Ignore deliberate fail test")
-    @Test        
+    @Test //8       
     public void failedTest(){
         Assert.fail();
     }

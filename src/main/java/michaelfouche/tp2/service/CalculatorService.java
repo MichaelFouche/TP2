@@ -14,6 +14,9 @@ public interface CalculatorService {
     int add(int a, int b);
     int subtract(int a, int b);
     boolean sameValue(int a, int b);
+    boolean notSameValue(int a, int b);
     boolean valTrue(boolean a);
+    boolean valFalse(boolean a);
+    Integer valNull(Integer a);
     boolean valNotNull(Integer a);
 }

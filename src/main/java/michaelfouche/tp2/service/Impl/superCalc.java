@@ -14,18 +14,28 @@ import michaelfouche.tp2.service.CalculatorService;
  */
 public class superCalc implements CalculatorService{
     
-    public int add(int a, int b)
-    {
-        System.out.println("Super Calc Add");
-        return a+b;
-    }
-    
+    public int add(int a, int b){
+        return a+b;    
+    }    
     public int subtract(int a, int b){
-        System.out.println("Super Calc Subtract");
         return a-b;
     }
-   /* public boolean sameValue(int a, int b){
-        System.out.println("Same Value");
+    public boolean sameValue(int a, int b){
         return a==b;
-    }/*
+    }
+    public boolean notSameValue(int a, int b){
+        return a!=b;
+    }
+    public boolean valTrue(boolean a){
+        return a;
+    }
+    public boolean valFalse(boolean a){
+        return a;
+    }
+    public Integer valNull(Integer a){
+        return a;
+    }
+    public boolean valNotNull(Integer a){
+        return a!=null;
+    }
 }

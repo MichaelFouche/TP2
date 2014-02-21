@@ -23,7 +23,16 @@ public class CalculatorServiceImpl implements CalculatorService{
     public boolean sameValue(int a, int b){
         return a==b;
     }
+    public boolean notSameValue(int a, int b){
+        return a!=b;
+    }
     public boolean valTrue(boolean a){
+        return a;
+    }
+    public boolean valFalse(boolean a){
+        return a;
+    }
+    public Integer valNull(Integer a){
         return a;
     }
     public boolean valNotNull(Integer a){
