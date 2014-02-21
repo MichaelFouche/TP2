@@ -72,9 +72,7 @@ public class CalculatorTest   {
     public void failedTest(){
         Assert.fail();
     }
-    //exception
     
-    //verify arrays
     @Test (timeOut = 10)//9 &10
     public void verifyArrayContents()throws Exception{
         String[] arrayCars ={"Toyota","Subaru"};
