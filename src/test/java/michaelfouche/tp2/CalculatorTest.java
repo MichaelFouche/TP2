@@ -88,8 +88,6 @@ public class CalculatorTest   {
         String[] arrayCars ={"Toyota","Subaru"};
         Assert.assertEquals(service.getValueInArray(arrayCars),"Toyota");
    }
-            
-    
     
     @org.testng.annotations.BeforeClass
     public static void setUpClass() throws Exception {
